@@ -1,0 +1,42 @@
+# node modules
+node_modules/
+
+# build output
+.next/
+out/
+
+# production
+dist/
+
+# local env files
+.env
+.env.local
+.env.*.local
+
+# vercel
+.vercel/
+
+# log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# typescript build
+*.tsbuildinfo
+
+# lock files (depends on your package manager - keep only one)
+package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# IDE/editor junk
+.vscode/
+.idea/
+
+# optional: ignore public assets if generated dynamically
+# /public/static/
