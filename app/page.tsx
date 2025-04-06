@@ -1,32 +1,44 @@
-import { ArrowRight, Github, Linkedin, Mail, Twitter } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { ArrowRight, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { AnimatedSection } from "@/components/animated-section"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { AnimatedSection } from "@/components/animated-section";
 
 export default function Portfolio() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 place-items-center">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="text-xl font-bold">Sam Neghabat</span>
           </div>
           <nav className="hidden md:flex gap-6">
-            <Link href="#about" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#about"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
               About
             </Link>
-            <Link href="#skills" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#skills"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
               Skills
             </Link>
-            <Link href="#projects" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#projects"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
               Projects
             </Link>
-            <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#contact"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
               Contact
             </Link>
           </nav>
@@ -66,7 +78,10 @@ export default function Portfolio() {
         </div>
       </header>
       <main className="flex-1 self-center">
-        <AnimatedSection className="container py-24 sm:py-32" animation="animate-fade-in">
+        <AnimatedSection
+          className="container py-24 sm:py-32"
+          animation="animate-fade-in"
+        >
           <div className="grid gap-8 lg:grid-cols-[1fr_400px] lg:gap-12">
             <div className="flex flex-col justify-center space-y-4 hero-content">
               <div className="space-y-2">
@@ -74,16 +89,22 @@ export default function Portfolio() {
                   Hi, I'm <span className="text-primary">Sam Neghabat</span>
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                  Senior Frontend Developer specializing in building exceptional digital experiences
+                  Senior Frontend Developer specializing in building exceptional
+                  digital experiences
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Button asChild className="btn-primary group">
                   <Link href="#projects">
-                    View My Work <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    View My Work{" "}
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
-                <Button variant="outline" asChild className="transition-all hover:bg-primary/10">
+                <Button
+                  variant="outline"
+                  asChild
+                  className="transition-all hover:bg-primary/10"
+                >
                   <Link href="#contact">Get in Touch</Link>
                 </Button>
               </div>
@@ -102,31 +123,43 @@ export default function Portfolio() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection id="about" className="container py-24 sm:py-32 border-t" animation="animate-slide-up">
+        <AnimatedSection
+          id="about"
+          className="container py-24 sm:py-32 border-t"
+          animation="animate-slide-up"
+        >
           <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
             <h2 className="text-3xl font-bold leading-[1.1] sm:text-3xl md:text-5xl">
               About <span className="text-primary">Me</span>
             </h2>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              I'm a passionate frontend developer with over 8 years of experience building modern web applications. I
-              specialize in React, Next.js, and modern frontend technologies, with a focus on creating performant,
-              accessible, and visually appealing user interfaces.
+              I'm a passionate frontend developer with over 8 years of
+              experience building modern web applications. I specialize in
+              React, Next.js, and modern frontend technologies, with a focus on
+              creating performant, accessible, and visually appealing user
+              interfaces.
             </p>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              When I'm not coding, you can find me hiking in the mountains, reading science fiction, or experimenting
-              with new cooking recipes. I believe in continuous learning and sharing knowledge with the developer
-              community.
+              When I'm not coding, you can find me hiking in the mountains,
+              reading science fiction, or experimenting with new cooking
+              recipes. I believe in continuous learning and sharing knowledge
+              with the developer community.
             </p>
           </div>
         </AnimatedSection>
 
-        <AnimatedSection id="skills" className="container py-24 sm:py-32 border-t" animation="animate-slide-up">
+        <AnimatedSection
+          id="skills"
+          className="container py-24 sm:py-32 border-t"
+          animation="animate-slide-up"
+        >
           <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
             <h2 className="text-3xl font-bold leading-[1.1] sm:text-3xl md:text-5xl">
               Skills & <span className="text-primary">Technologies</span>
             </h2>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              I work with a variety of modern technologies to create exceptional digital experiences.
+              I work with a variety of modern technologies to create exceptional
+              digital experiences.
             </p>
 
             <Tabs defaultValue="frontend" className="w-full max-w-[800px] mt-8">
@@ -160,22 +193,38 @@ export default function Portfolio() {
               </TabsContent>
               <TabsContent value="frameworks" className="mt-6">
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                  {["Next.js", "Gatsby", "Vue.js", "Nuxt.js", "Angular", "Express", "NestJS", "Remix"].map(
-                    (skill, index) => (
-                      <div
-                        key={skill}
-                        className="flex items-center justify-center p-4 rounded-lg border bg-card text-card-foreground shadow-sm skill-item animate-fade-in"
-                        style={{ animationDelay: `${index * 100}ms` }}
-                      >
-                        {skill}
-                      </div>
-                    ),
-                  )}
+                  {[
+                    "Next.js",
+                    "Gatsby",
+                    "Vue.js",
+                    "Nuxt.js",
+                    "Angular",
+                    "Express",
+                    "NestJS",
+                    "Remix",
+                  ].map((skill, index) => (
+                    <div
+                      key={skill}
+                      className="flex items-center justify-center p-4 rounded-lg border bg-card text-card-foreground shadow-sm skill-item animate-fade-in"
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
+                      {skill}
+                    </div>
+                  ))}
                 </div>
               </TabsContent>
               <TabsContent value="tools" className="mt-6">
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                  {["Git", "GitHub", "VS Code", "Figma", "Docker", "Jest", "Cypress", "Webpack"].map((skill, index) => (
+                  {[
+                    "Git",
+                    "GitHub",
+                    "VS Code",
+                    "Figma",
+                    "Docker",
+                    "Jest",
+                    "Cypress",
+                    "Webpack",
+                  ].map((skill, index) => (
                     <div
                       key={skill}
                       className="flex items-center justify-center p-4 rounded-lg border bg-card text-card-foreground shadow-sm skill-item animate-fade-in"
@@ -212,7 +261,11 @@ export default function Portfolio() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection id="projects" className="container py-24 sm:py-32 border-t" animation="animate-slide-up">
+        <AnimatedSection
+          id="projects"
+          className="container py-24 sm:py-32 border-t"
+          animation="animate-slide-up"
+        >
           <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
             <h2 className="text-3xl font-bold leading-[1.1] sm:text-3xl md:text-5xl">
               Featured <span className="text-primary">Projects</span>
@@ -247,20 +300,28 @@ export default function Portfolio() {
               },
               {
                 title: "Portfolio Generator",
-                description: "A tool that helps developers create beautiful portfolios without writing code.",
+                description:
+                  "A tool that helps developers create beautiful portfolios without writing code.",
                 tags: ["Next.js", "TypeScript", "Shadcn UI", "Prisma"],
                 image: "/placeholder.svg?height=300&width=500",
               },
               {
                 title: "Recipe Finder",
-                description: "An application that helps users find recipes based on ingredients they have at home.",
+                description:
+                  "An application that helps users find recipes based on ingredients they have at home.",
                 tags: ["React", "GraphQL", "Apollo", "CSS Modules"],
                 image: "/placeholder.svg?height=300&width=500",
               },
               {
                 title: "Weather App",
-                description: "A weather application with location detection, forecasts, and beautiful visualizations.",
-                tags: ["React", "OpenWeather API", "Geolocation", "Framer Motion"],
+                description:
+                  "A weather application with location detection, forecasts, and beautiful visualizations.",
+                tags: [
+                  "React",
+                  "OpenWeather API",
+                  "Geolocation",
+                  "Framer Motion",
+                ],
                 image: "/placeholder.svg?height=300&width=500",
               },
             ].map((project, index) => (
@@ -279,10 +340,15 @@ export default function Portfolio() {
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-muted-foreground mb-4">{project.description}</p>
+                  <p className="text-muted-foreground mb-4">
+                    {project.description}
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
-                      <span key={tag} className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-md">
+                      <span
+                        key={tag}
+                        className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-md"
+                      >
                         {tag}
                       </span>
                     ))}
@@ -293,7 +359,11 @@ export default function Portfolio() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection id="testimonials" className="container py-24 sm:py-32 border-t" animation="animate-slide-up">
+        <AnimatedSection
+          id="testimonials"
+          className="container py-24 sm:py-32 border-t"
+          animation="animate-slide-up"
+        >
           <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
             <h2 className="text-3xl font-bold leading-[1.1] sm:text-3xl md:text-5xl">
               What People <span className="text-primary">Say</span>
@@ -333,7 +403,9 @@ export default function Portfolio() {
                   <p className="mb-4 italic">"{testimonial.quote}"</p>
                   <div>
                     <p className="font-semibold">{testimonial.author}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {testimonial.role}
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -341,7 +413,11 @@ export default function Portfolio() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection id="contact" className="container py-24 sm:py-32 border-t" animation="animate-slide-up">
+        <AnimatedSection
+          id="contact"
+          className="container py-24 sm:py-32 border-t"
+          animation="animate-slide-up"
+        >
           <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
             <h2 className="text-3xl font-bold leading-[1.1] sm:text-3xl md:text-5xl">
               Get in <span className="text-primary">Touch</span>
@@ -372,7 +448,10 @@ export default function Portfolio() {
               </div>
             </div>
 
-            <div className="space-y-4 animate-fade-in" style={{ animationDelay: "200ms" }}>
+            <div
+              className="space-y-4 animate-fade-in"
+              style={{ animationDelay: "200ms" }}
+            >
               <h3 className="text-xl font-bold">Send a Message</h3>
               <form className="space-y-4">
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -475,6 +554,5 @@ export default function Portfolio() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
-
